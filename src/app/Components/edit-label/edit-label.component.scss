@@ -1,0 +1,65 @@
+.title {
+    font-weight: bold;
+  }
+  
+  .editLable {
+    max-height: 392px;
+    overflow-y: auto;
+    padding: 15px;
+  }
+  
+  .done {
+    margin-left: 75%;
+    background-color: transparent;
+    border: none;
+  }
+  
+  #button {
+    // opacity: 0.8;
+    width: 20px;
+    height: 20px;
+    border: none;
+  }
+  .main-container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 500px;
+    margin-top: 100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    
+  }
+  .button{
+   
+    background-color: transparent;
+    border: none;
+    opacity: 0.8;
+  }
+
+
+  .matcard2{
+    font-size: 18px;
+}
+
+.typepart{
+    width:6cm;
+    outline: none;
+    border:none;
+}
+
+.cancelbtn{
+    font-size: 3px;
+}
+
+.done{
+    outline: none;
+    border: none;
+}
+
+.icons{
+  display: flex;
+  
+  
+}

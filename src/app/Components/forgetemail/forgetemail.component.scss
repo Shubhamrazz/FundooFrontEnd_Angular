@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+      flex-direction: column;
+      border: 1px solid #DADCE0;
+      border-radius: 7px;
+      width: 400px;
+      padding: 30px;
+      background-color: #F5F5F5; 
+      margin: auto;
+      margin-top: 70px;
+      height: auto;
+        min-height: 450px;
+        align-content: center;
+    }
+    .center{ margin: 2px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 5%;
+        text-align: center;
+    }
+    .email{
+        display:flex;
+        flex-direction: column;
+    }
+    .button{
+        position: relative;
+        display: flex;
+       flex-direction: row;
+        justify-content: end;
+        margin-top: 25%;
+    }
+    .button2{
+        left: 50%;
+        cursor: pointer;
+    }

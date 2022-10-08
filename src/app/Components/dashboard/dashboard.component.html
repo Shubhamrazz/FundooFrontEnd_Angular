@@ -1,0 +1,114 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+            <!-- <img src="assets\menu.png" alt="menu" width="25px"> -->
+        </button>
+        <span class="keepimage">
+            <span class="keepimg">
+                <img src="assets\keep.png" alt="keep" width="40px">
+            </span>
+        </span>
+        <span class="page" style="color: black">Fundoo</span>
+
+        <div>
+            <form>
+                <div class="searchbody">
+                    <button mat-icon-button class="example-icon">
+                        <img src="assets\search.png" alt="search" width="25px">
+                    </button>
+
+                    <input class="inputtxt" autocomplete="off" type="text" matInput placeholder="Search"
+                        (keyup)="searchNote($event)" id="search">
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="rightitems">
+            <div>
+                <button mat-icon-button class="example-icon -icon" (click)="referesh()"
+                    aria-label="Example icon-button with refresh icon">
+                    <img src="assets\referesh.png" alt="refresh" width="25px">
+                </button>
+            </div>
+
+            <div>
+                <button mat-icon-button class="example-icon -icon" aria-label="Example icon-button with lasticon icon">
+                    <img src="assets\lasticon.png" alt="lasticon" width="25 px">
+                </button>
+            </div>
+
+            <div>
+                <button mat-icon-button class="example-icon -icon" aria-label="Example icon-button with setting icon">
+                    <img src="assets\setting.png" alt="setting" width="25 px">
+                </button>
+            </div>
+
+        </div>
+        <div class="account">
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <img src="assets\apps.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+
+            <div>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+                    (click)="logout()" routerLink="./login">
+                    <img src="assets\account.png" alt="menu icon" width="25px">
+                </button>
+            </div>
+        </div>
+
+
+    </mat-toolbar>
+
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav mode="side" id="sidenav" [class.menu-open]="!isMenuOpen" [class.menu-close]="isMenuOpen" opened
+            #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56 ">
+
+            <mat-list class="sidenav">
+                <div class="click sidebar-item" fxLayoutGap="30px" routerLink="/dashboard/note">
+                    <img src="assets\Note.png" alt="Note" width="25px">
+                    <span>Notes</span>
+                </div>
+
+                <div class="click sidebar-item" fxLayoutGap="30px" routerLink=".">
+                    <img src="assets\remainder.png" alt="Remainder" width="25 px">
+                    <span> Remainder</span>
+                </div>
+
+                <div class="click sidebar-item" *ngFor="let item of labelArray" fxLayoutGap="30px" >
+                    <img src="../../../assets/sidenav_arrow_label.svg" alt="">
+                    
+                    {{item.labelName}}
+                </div>
+                <!-- (keyup)="addLevel($event)" -->
+                <div class="click sidebar-item" (click)="openDialog()" fxLayoutGap="30px" routerLink=".">
+                    <img src="assets\edit.png" alt="Edit label" width="25 px">
+                    <span>Edit labels</span>
+                </div>
+
+                <div class="click sidebar-item" fxLayoutGap="30px" routerLink="/dashboard/archive">
+                    <img src="assets\archive.png" alt="Archieve" width="25 px">
+                    <span>Archive</span>
+                </div>
+
+                <div class="click sidebar-item" fxLayoutGap="30px" routerLink="/dashboard/trash">
+                    <img src="assets\trash.png" alt="Trash" width="25 px">
+                    <span>Trash</span>
+                </div>
+            </mat-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+

@@ -1,0 +1,114 @@
+.container{
+    margin: 100px auto 0 auto;
+    display: flex;
+    min-height: 500px;
+    height: auto;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    width: 42%;
+    justify-content: center;
+    padding:4px;
+}
+
+.parentdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px 0;
+    
+}
+
+mat-label{
+    font-size: 15px;
+}
+
+.inputlabel{
+    width: 165px;
+    height: 35px;
+    margin: 5px 1px;
+    font-size: 8px;
+}
+
+
+input{
+    font-size: 15px;
+}
+
+.em{
+    width: 100%;
+    font-size: 8px;
+}
+
+.right{
+    width: 240px;
+}
+
+.left{
+    padding: 15px;
+    width: 350px;
+}
+
+.sub{  
+    margin:15px 5px;
+}
+
+.email{
+    margin:30px 0 23px 0;
+    padding-bottom: 0px;
+}
+.childdiv{
+    padding-top: 3px;
+}
+
+.heading{
+    font-size: 40px;
+}
+
+.right{
+    text-align: center;
+    padding-top:5rem;
+}
+
+.buttn{
+    display: flex;
+    margin: 5em 2px 2px 5px;
+    justify-content:space-between;
+}
+
+.btnColor{
+    border-color: blue;
+    columns: white;
+}
+
+.valdata{
+    font-size: smaller;
+    margin-left: 15px;
+}
+::ng-deep.mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+.showpass{
+    padding: 13px 0 0 10px;
+    margin-top: 40px;
+}
+
+button{
+    color:#1a73e8;
+    padding:0px 13px 0 10px;
+    font-size: 1em;
+}
+.fullbutton{
+    background-color:#1a73e8 ;
+    color:white;
+}
+.err{
+    font-size:12px;
+    padding-top:11px;
+    text-align:left;
+}
+.pwd-data{
+    margin-top: 23px;
+    margin-left: 7px;
+    font-weight: 100;
+}

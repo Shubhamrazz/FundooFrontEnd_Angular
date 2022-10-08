@@ -1,0 +1,46 @@
+<div class="container">
+    <div class=" center">
+        <h1>
+          <span style="color:blue">F</span>
+          <span style="color:red">u</span>
+          <span style="color:yellow">n</span>
+          <span style="color:blue">d</span>
+          <span style="color:green">o</span>
+          <span style="color:red">o</span>
+        </h1>
+        <h1>Login</h1>
+        <span style="font-size:large">
+          Use your FundooNote Account
+        </span>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mail">
+            <mat-form-field appearance="outline" class="mail">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="abc@gmail.com">
+                <mat-error class="err">Enter the email</mat-error>
+                </mat-form-field> 
+        </div>
+        <div class="psw">
+            <mat-form-field appearance="outline" class="inputlabel">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" placeholder="Password">
+              <mat-error class="err">Enter the password</mat-error>
+            </mat-form-field>
+        </div>
+        <!-- <div>
+            <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
+        </div> -->
+
+        <div class="button">
+            <div class="button1">
+                  <button mat-button routerLink="/forget">Forget Password</button>
+            </div>
+    
+            <div class="button2">
+                  <button mat-raised-button color="primary" >Login</button>
+            </div>
+        </div>
+    </form> 
+</div>     
+ 

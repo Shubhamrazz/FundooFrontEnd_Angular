@@ -1,0 +1,21 @@
+<div class="displayNote">
+    <div *ngFor='let note of NoteArray | filter: searchString '  >
+        <mat-card class="example-card"   [style.background]="note.bgcolor">
+            <mat-card-title (click)="openDialog(note)" style="font-size: 15px;">
+                {{note.title }}
+                <!-- <button class="pinbutton">
+                    <img class="pin" src="../../../assets/pin.svg" alt="">
+                </button> -->
+            </mat-card-title>
+
+            <mat-card-content (click)="openDialog(note)" class="description">
+                {{ note.description }}
+            </mat-card-content>
+            <mat-card-actions>
+                <app-icons [noteObj]="note" (messagetoDisplay)="receivemessagetoDisplay($event)"  (changeColorOfNote)="colourchanged($event)" ></app-icons>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+<!-- -->

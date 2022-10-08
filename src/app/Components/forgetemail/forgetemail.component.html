@@ -1,0 +1,30 @@
+<div class="container">
+    <div class=" center">
+        <h1>
+          <span style="color:blue">F</span>
+          <span style="color:red">u</span>
+          <span style="color:yellow">n</span>
+          <span style="color:blue">d</span>
+          <span style="color:green">o</span>
+          <span style="color:red">o</span>
+        </h1>
+        <h1>Find your Password</h1>
+        <span style="font-size:large">
+          Enter your recovery email
+        </span>
+    </div>
+
+    <form [formGroup]="forgetemailForm" (ngSubmit)="onSubmit()">
+        <div class="email">
+            <mat-form-field appearance="outline" class="email">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="abc@gmail.com">
+                <mat-error class="err">Enter your email</mat-error>
+                </mat-form-field> 
+        </div>
+        <div class="button">
+            <div class="button2">
+                <button mat-raised-button color="primary" >Next</button>
+            </div>
+        </div>
+    </form>

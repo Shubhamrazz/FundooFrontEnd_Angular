@@ -1,0 +1,55 @@
+<div *ngIf="!isTrash" fxLayout="row" fxLayoutAlign="space-between center" style="width: 260px;">
+
+    <img class="icon" src="../../../assets/Icons/alert_reminder.svg" style="width:20px;">
+
+
+    <img class="icon" src="../../../assets/Icons/person.svg" style="width:20px;">
+
+
+    <div class=" search_image" mat-flat-button matTooltip="color" [matMenuTriggerFor]="colorMenu">
+        <img class="icon" src="../../../assets/Icons/color_palette.svg" *ngIf="!isTrash" width="18px" height="18px">
+        <mat-menu #colorMenu="matMenu">
+            <div *ngFor='let color of allColours' class="color">
+                <button class="colorIcon" [style.background]="color.code" (click)="setColor(color.name)"></button>
+            </div>
+        </mat-menu>
+    </div>
+
+    <img class="icon" src="../../../assets/Icons/image.svg" style="width:20px;">
+
+
+    <img class="icon" *ngIf="isDisplayComponent" src="../../../assets/Icons/archive.svg" (click)="Archive()"
+        style="width:20px;">
+
+    <img class="icon" *ngIf="isArchive" matTooltip="Unarchive" src="../../../assets/unarchive.png"
+        (click)="UnArchive()">
+
+    <img class="icon" src="../../../assets/Icons/threedots.svg" [matMenuTriggerFor]="menu" style="width:20px;">
+
+</div>
+
+<mat-menu #menu="matMenu">
+    <span mat-menu-item (click)="trash()">Delete Note</span>
+    <span mat-menu-item [matMenuTriggerFor]="addLabels">Add label</span>
+    <span mat-menu-item>Add drawing</span>
+    <span mat-menu-item>Make a copy</span>
+    <span mat-menu-item>Show checkbox</span>
+    <span mat-menu-item>Copy to Google Docs</span>
+</mat-menu>
+
+<mat-menu #addLabels="matMenu"  >
+    <span mat-menu-item *ngFor="let item of message">
+         <mat-checkbox (click)="onAddLevel()" >{{item.labelName}} </mat-checkbox>
+    </span>
+    <!-- (click)="newMessage()"  {{item.labelName}} *ngFor="let item of this.labelArray"-->
+</mat-menu>
+
+
+<div *ngIf="isTrash" style="height:20px; width: auto; border-radius: 50px;">
+
+    <img class="icon" (click)="deleteForever()" style="margin-left: 20px; " src="../../../assets/deleteforever.png">
+
+    <img class="icon" (click)="trash()" matTooltip="Restore" style="margin-left: 20px; "
+        src="../../../assets/restore.png">
+
+</div>

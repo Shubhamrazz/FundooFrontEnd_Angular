@@ -1,0 +1,58 @@
+.icon {
+    height: 20px;
+    width: 20px;
+    // padding-bottom: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.colorButton{
+    margin-right: 5px;
+    white-space: 2px;
+}
+.colorButton:hover{
+   border:1px solid balck;
+}
+.pop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    width: 270px;
+    margin-left: 2px;
+}
+.mat-mini-fab{
+    width: 25px;
+    height: 25px;
+} 
+.mat-mini-fab:hover{
+    border:2px solid black;
+} 
+::ng-deep.mat-menu-panel{
+    min-height: 51px;
+}
+
+.colorIcon{
+    border-radius: 100px;
+    border: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.label{
+    opacity: 1;
+    left: 210.222px;
+    top: 100px;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    font-size: 13px;
+    max-width: 160px;
+    padding-top: 11px;
+    position: absolute;
+    width: 160px;
+    z-index: 5003;
+}
+

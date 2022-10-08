@@ -1,0 +1,108 @@
+.searchbody{
+    background-color:#f1ebeb;
+    border-radius: 6px;
+    width:820px;
+}
+.inputtxt{
+    background-color:#f1ebeb;
+    width:90%;
+    height: 30px;
+    font-size: medium;
+    outline: none;
+    
+}
+.keepimage{
+    margin-left:20px;
+    padding-top: 8px;
+}
+.keepimg{
+    margin-top: 5px;
+
+}
+.rightitems{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+}
+.account{
+    display: flex;
+    flex-direction: row;
+   
+    margin-left: 1%;
+}
+.page{
+    margin-left: 7px;
+    margin-right: 80px;
+}
+.searchbody:hover{
+    background-color: white;
+    border-width: thin;
+    border:1px solid #e3dede;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.inputtxt:hover{
+    background-color: white;
+}
+//**************************
+// .example-sidenav-container {flex: 1;}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .click{
+    opacity: 0.6;
+    border-top-right-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    padding-top: 6px;
+    display: inline-flex;
+    font-weight: bolder;
+    color: black 10px;
+    border: transparent;
+    background-color: white;
+  }
+  .sidebar-item {
+    margin-left: 18px;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .click:focus {
+    background: #feefc3;
+    color: rgb(0, 0, 0);
+    border-bottom-right-radius: 30vh;
+    border-top-right-radius: 30vh;
+    padding: 5px;
+    }
+  

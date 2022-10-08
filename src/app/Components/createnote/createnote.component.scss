@@ -1,0 +1,125 @@
+// .container {
+//   margin-top: 28px;
+//   margin-left: 90px;
+  
+// }
+// .container .mat-card {
+//     box-shadow: 2px 2px 2px 2px #888888;
+//   width: 550x;
+// }
+// .matcard-1 {
+//   width: 600px;
+//   height: 100 px;
+//   border: solid transparent;
+//   border-radius: 5px;
+//   // height:50px;
+// }
+// img {
+//   height: 25px;
+//   margin-left: 20px;
+// }
+// .titlebar-2 {
+//   height: 30px;
+//   border: none;
+//   font-size: larger;
+//   outline:none;
+//   font-family: Arial, Helvetica, sans-serif;
+//  }
+// .textarea {
+//   height: 30px;
+//    border: none;
+//    font-size: larger;
+//    outline:none;
+//    font-family: Arial, Helvetica, sans-serif;
+// }
+// .closebutton {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: flex-end;
+//    padding-right: 20px;
+//    margin-left: 160px;
+// }
+// button.close {
+//   border: none;
+//   font-size: 17px;
+//   font-family: Arial, Helvetica, sans-serif;
+//   cursor: pointer;
+//   border-radius: 5px;
+// }
+// .closebutton:hover{ filter: brightness(80%);
+//   transform: scale(1);
+//   z-index: 100;
+// }
+// .pinbutton {
+//   // height: 25px;
+//   width: 25px;
+//   border: none;
+//   background-color: transparent;
+//   left: 100px;
+//   padding-left: 290px;
+// }
+// .takenote{border:none;
+//    outline:none;
+//    font-weight:bold;
+//    font-size: 16px;
+//    align-content: center;
+//    margin-left: 5px;
+// }
+// .icons{
+//   width: 10px;
+//   // padding-top: 15px;
+//   margin-top: 15px;
+//   padding-inline: 10px;
+// }
+// .imgtag{
+//   padding-left:200px;
+// }
+
+//******************************************
+.title input {
+  width: 520px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+
+}
+
+.desc input {
+  width: 420px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.style {
+  border-radius: 8px;
+  width: 600px;
+  padding: 20px;
+}
+.style-xs{
+  display: flex;
+  width: fit-content;
+}
+
+.icon{
+  top:50%;
+  left:50%;
+  padding-right:5px;
+  // padding-left:5px;
+  // padding-inline-end: 5px;
+  // padding-inline: 5px;
+  // justify-content: flex-end;
+  // margin-left: 20px;
+}
+.icon2{
+padding-inline-start: 5px;
+padding-inline: 5px;
+padding-inline-end: 5px;
+}
+.button1{
+  padding-right: 5px;
+}

@@ -1,0 +1,54 @@
+<div class="matcard">
+    Edit Labels
+    <br>
+    <br>
+
+    <div class="input" fxLayoutGap="20px">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button class="cancelbttn" *ngIf="show" (click)="onOpen()" mat-icon-button color="" aria-label="">
+                <img id="button" src="../../../assets/addlabel.svg">
+            </button>
+
+            <button class="button" *ngIf="!show" (click)="onClose()" mat-icon-button color="" aria-label="">
+                <img id="button" src="../../../assets/close_label.svg">
+            </button>
+
+            <input matInput [(ngModel)]="labelname" class="typepart" type="text" placeholder="create new label"
+                fxLayoutAlign="center center">
+            <button class="button" *ngIf="!show" (click)="onCreate()" mat-icon-button color="" aria-label="">
+                <img id="button" src="../../../assets/check_label.svg">
+            </button>
+
+        </div>
+    </div>
+
+    <div class="icons" fxlayoutAlign="row" fxlayoutAlign="center center" *ngFor="let item of data">
+        <div class="iconfirst" (mouseover)="cursor=true" (mouseout)="cursor=false">
+            <button *ngIf="!cursor" mat-icon-button>
+                <img id="button" src="../../../assets/sidenav_arrow_label.svg">
+            </button>
+            <button *ngIf="cursor" (click)="deleteNoteLabel(item)" mat-icon-button>
+                <img id="button" src="../../../assets/delete_label.svg">
+            </button>
+        </div>
+
+        <input style="width:170px;" matInput type="text"  name="label" #label value="{{item.labelName}}"
+            style="border:0px; outline:none;">
+            
+        <!-- <a mat-list-item *ngFor="let item of this.labelArray">{{item.labelname}}</a> -->
+        <!-- "   "{{item.labelname}}"  [(ngModel)]="{{item.labelname}}"    -->
+        <!--       [(ngModel)]="({{item.labelname}})"    -->
+        
+        <div class="iconlast">
+
+            <button (click)="updateLabel(item)" id="button" mat-icon-button>
+                <img id="button" src="../../../assets/edit_label.svg">
+            </button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="done" fxLayout="column" fxLayoutAlign="end-end">
+        <button mat-raised-button mat-dialog-close>Done</button>
+    </div>

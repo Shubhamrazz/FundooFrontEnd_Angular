@@ -1,0 +1,82 @@
+<!-- <div fxLayoutAlign="center center" class="container" fxLayoutGap="40px">
+    <form>
+         <div>
+            <mat-card class="matcard-1"     fxLayout="row">
+                <div class="takenote"  fxLayout="row">
+                    <input type="text"  placeholder="Take a note.." />
+                    <div class="imgtag">
+                        <img src='assets\checkbox.svg'>
+                        <img src='assets\brush.svg'>
+                        <img src='assets\image.svg'>
+                    </div>
+                </div>
+            </mat-card>
+        </div>  
+        <mat-card class="matcard-2" *ngIf="show || !show" (click)="onOpen()"
+          Flex.sm fxFlex.xs>
+            <div fxLayout="row" fxLayoutAlign="space-between stretch">
+                <div fxLayout="column" fxLayoutAlign="space-between start">
+                    <div  >
+                        <textarea class="titlebar-2" placeholder="Title"></textarea>
+                        <button class="pinbutton">
+                            <img class="takenotepin"src='assets\pin.svg' alt="pin">
+                        </button>
+                    </div>
+                    <textarea *ngIf="show"  class="textarea" placeholder="Take a note..." ></textarea>
+                </div>
+            </div>
+            <div class="icons" fxLayout="row">
+
+                <img src="../../../assets/Icons/alert_reminder.svg">
+                <img src="../../../assets/Icons/person.svg">
+                <img src="../../../assets/Icons/color_palette.svg">
+                <img src="../../../assets/Icons/image.svg">
+                <img src="../../../assets/Icons/archive.svg">
+                <img src="../../../assets/Icons/threedots.svg">
+                <div class="closebutton" fxLayout="row">
+                    <button class="close" mat-button (click)="onSubmit()">Close</button>
+                </div>
+            </div>
+        </mat-card>
+    </form>
+</div>  -->
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <div fxLayout="column" class="style" ngClass.xs="style-xs" ngClass.md="style-md" ngClass.sm="style-sm">
+            <mat-card>
+                <div *ngIf="show" class="title">
+                    <input type="text" placeholder="Title" formControlName="title">
+                </div>
+                <div fxLayout="row" >
+                    <div *ngIf="show || !show" (click)="onOpen()" class="desc">
+                        <input type="text" placeholder="Take a note..." formControlName="description">
+                    </div>
+                    <div class="icon" *ngIf="!show" fxLayoutAlign="center" fxLayoutAlign="end end">
+                        <img style="width:20px;" src='assets\checkbox.svg'>
+                        <img style="width:20px;" src='assets\brush.svg'>
+                        <img style="width:20px;" src='assets\image.svg'>
+                    </div>
+                </div>
+                <div class="button1" *ngIf="show" fxLayout="row" fxLayoutAlign="space-between center" style="margin-top: 20px;">
+
+                    <img src="../../../assets/Icons/alert_reminder.svg" style="width:20px;">
+
+                    <img src="../../../assets/Icons/person.svg" style="width:20px;">
+
+                    <img src="../../../assets/Icons/color_palette.svg" style="width:20px;">
+
+                    <img src="../../../assets/Icons/image.svg" style="width:20px;">
+
+                    <img src="../../../assets/Icons/archive.svg" style="width:20px;">
+
+                    <img src="../../../assets/Icons/threedots.svg" style="width:20px;">
+
+
+                    <button mat-button (click)="onSubmit()">Close</button>
+
+                </div>
+
+            </mat-card>
+        </div>
+    </div>
+</form>
